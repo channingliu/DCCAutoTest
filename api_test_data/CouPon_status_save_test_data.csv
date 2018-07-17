@@ -1,0 +1,40 @@
+testCase,testData,ExpRes
+status=1【正常】,"{
+  ""id"": 190,
+  ""status"": 1
+}",success
+status=2【已停发】,"{
+  ""id"": 190,
+  ""status"": 2
+}",success
+status=3【已过期】,"{
+  ""id"": 190,
+  ""status"": 3
+}",success
+status=0【已停用】,"{
+  ""id"": 190,
+  ""status"": 0
+}",success
+status=4【非法状态】,"{
+  ""id"": 190,
+  ""status"": 4
+}",fail
+"status=""d"" 字符","{
+  ""id"": 190,
+  ""status"": ""d""
+}",JSON parse error
+statu不传,"{
+  ""id"": 190
+}",success
+id 不存在,"{
+  ""id"": 120,
+  ""status"": 0
+}",No origin bean specified
+id不传,"{
+  ""status"": 0
+}",No origin bean specified
+id值类型不合法,"{
+  ""id"": ""12d"",
+  ""status"": 0
+}",JSON parse error
+参数为空,{},No origin bean specified

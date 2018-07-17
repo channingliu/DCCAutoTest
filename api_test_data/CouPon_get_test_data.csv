@@ -1,0 +1,5 @@
+testCase,testData,ExpRes
+存在的id,"{""id"":190}",success
+不传id ,{},No origin bean specified
+id为空,"{""id"":""""}",No origin bean specified
+id不存在,"{""id"":12345678}",No origin bean specified

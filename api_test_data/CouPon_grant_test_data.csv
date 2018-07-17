@@ -1,0 +1,58 @@
+testCase,testData,ExpRes
+参数正常,"{
+  ""count"": 1,
+  ""couponId"": 190,
+  ""phone"": ""15108398537""
+}",success
+不传count,"{
+  ""couponId"": 190,
+  ""phone"": ""15108398537""
+}",数量必填
+不传couponId,"{
+  ""count"": 0,
+  ""phone"": ""15108398537""
+}",优惠券未指定
+不传phone,"{
+  ""count"": 0,
+  ""couponId"": 190
+}",电话为空
+count=2,"{
+  ""count"": 2,
+  ""couponId"": 190,
+  ""phone"": ""15108398537""
+}",success
+count=3,"{
+  ""count"": 3,
+  ""couponId"": 190,
+  ""phone"": ""15108398537""
+}",数量不能大于3
+count=0,"{
+  ""count"": 0,
+  ""couponId"": 190,
+  ""phone"": ""15108398537""
+}",数量不为0
+count=-1,"{
+  ""count"": -1,
+  ""couponId"": 190,
+  ""phone"": ""15108398537""
+}",数量负数
+count=小数,"{
+  ""count"": 1.23,
+  ""couponId"": 190,
+  ""phone"": ""15108398537""
+}",数量小数
+count=字符,"{
+  ""count"": ""hello"",
+  ""couponId"": 190,
+  ""phone"": ""15108398537""
+}",请输入数字
+couponId不存在,"{
+  ""count"": 1,
+  ""couponId"": 170,
+  ""phone"": ""15108398537""
+}",优惠券不存在
+电话不存在,"{
+  ""count"": 1,
+  ""couponId"": 170,
+  ""phone"": ""15108398526""
+}",电话不存在

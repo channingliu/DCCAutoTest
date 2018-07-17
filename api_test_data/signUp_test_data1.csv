@@ -1,0 +1,9 @@
+"用例	",testcase ,期望结果
+"用户名密码	正确","{
+    ""username"":""admin"",
+    ""password"":""Decheche@Admin###""
+}",success
+用户不存在,"{
+    ""username"":""admin1"",
+    ""password"":""Decheche@Admin###""
+}",fail

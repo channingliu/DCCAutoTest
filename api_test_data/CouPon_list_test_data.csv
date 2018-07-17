@@ -1,0 +1,180 @@
+testCase,testData,ExpRes
+参数正常,"{
+  ""categoryId"": 1,
+  ""keyword"": ""优惠券"",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 0
+}","select count(*) from (select * from coupon,coupon_product_limit where cateselect * from coupon,coupon_product_limit where coupon.name like ""优惠券"" or coupon.description like ""优惠券"" and coupon.status=0 and coupon.id=coupon_product_limit.coupon_id and category_id=1)"
+参数为空,{},5
+categoryId=1【维修】,"{
+  ""categoryId"": 1,
+  ""keyword"": ""优惠券"",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 0
+}",数量必填
+categoryId=2【保养】,"{
+  ""categoryId"": 2,
+  ""keyword"": ""优惠券"",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 0
+}",优惠券未指定
+categoryId=4[超出枚举],"{
+  ""categoryId"": 4,
+  ""keyword"": ""优惠券"",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 0
+}",33
+"categoryId=""a""[字符]","{
+  ""categoryId"": ""a"",
+  ""keyword"": ""优惠券"",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 0
+}",3
+不传categoryId,"{
+  ""keyword"": ""优惠券"",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 0
+}",3
+keyword不存在,"{
+  ""categoryId"": 1,
+  ""keyword"": ""优惠券aaa"",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 0
+}",数量不能大于3
+keyword空,"{
+  ""categoryId"": 1,
+  ""keyword"": """",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 0
+}",数量不为0
+keyword超长,"{
+  ""categoryId"": 1,
+  ""keyword"": ""2342452452345243523452452345sdfgsdgrtygrtw876*&^%dfasdfadfadfadfadsfasdfadfasdfasdlkfajsdklfjsadlkfjasdlkfjalfjakdlfjalsdfjakldfjalkdsfjaklsdfjaslkdfjaskldjfaslkdfjaklsdfjalksdfjaskldfjalksdfjioefjaslkfjlakgjlkajflasjfaie"",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 0
+}",数量负数
+keywrod数字,"{
+  ""categoryId"": 1,
+  ""keyword"": 1,
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 0
+}",数量负数
+不传keyword,"{
+  ""categoryId"": 1,
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 0
+}",数量小数
+page<0,"{
+  ""categoryId"": 1,
+  ""keyword"": ""接口"",
+  ""page"": -1,
+  ""pageSize"": 30,
+  ""status"": 0
+}",请输入数字
+page=0,"{
+  ""categoryId"": 1,
+  ""keyword"": ""接口"",
+  ""page"": 0,
+  ""pageSize"": 30,
+  ""status"": 0
+}",优惠券不存在
+page=小数,"{
+  ""categoryId"": 1,
+  ""keyword"":""接口"",
+  ""page"": 1.23,
+  ""pageSize"": 30,
+  ""status"": 0
+}",信息 
+page不为数字,"{
+  ""categoryId"": 1,
+  ""keyword"": ""接口"",
+  ""page"": ""a"",
+  ""pageSize"": 30,
+  ""status"": 0
+}",电话不存在
+page不传,"{
+  ""categoryId"": 1,
+  ""keyword"": ""接口"",
+  ""pageSize"": 30,
+  ""status"": 0
+}",33
+pageSize<0,"{
+  ""categoryId"": 1,
+  ""keyword"": ""接口"",
+  ""pageSize"": -1,
+  ""page"":1,
+  ""status"": 0
+}",请输入数字
+pageSize=0,"{
+  ""categoryId"": 1,
+  ""keyword"": ""接口"",
+  ""pageSize"": 0,
+  ""page"":1,
+  ""status"": 0
+}",优惠券不存在
+pageSize=小数,"{
+  ""categoryId"": 1,
+  ""keyword"":""接口"",
+  ""pageSize"": 1.23,
+  ""page"":1,
+  ""status"": 0
+}",信息 
+pageSize不为数字,"{
+  ""categoryId"": 1,
+  ""keyword"": ""接口"",
+  ""pageSize"": ""a"",
+  ""page"":1,
+  ""status"": 0
+}",电话不存在
+pageSize不传,"{
+  ""categoryId"": 1,
+  ""keyword"": ""接口"",
+  ""page"":1,
+  ""status"": 0
+}",33
+status=1,"{
+  ""keyword"": ""优惠券"",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 1
+}",2
+status=2,"{
+  ""keyword"": ""优惠券"",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 2
+}",2
+status=3,"{
+  ""keyword"": ""优惠券"",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 3
+}",2
+status=4,"{
+  ""keyword"": ""优惠券"",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": 4
+}",2
+status不为数字,"{
+  ""keyword"": ""优惠券"",
+  ""page"": 1,
+  ""pageSize"": 30,
+  ""status"": ""a""
+}",2
+不传status,"{
+  ""keyword"": ""优惠券"",
+  ""page"": 1,
+  ""pageSize"": 30
+}",2

@@ -1,0 +1,4 @@
+在cmd窗口分别执行下面的命令，安装
+pip install PyMySQL
+pip install request
+pip install ddt

@@ -1,0 +1,7 @@
+用例名称,phone,smsCode,smsKey,预期结果
+"输入正确的phone,smsCode,smsKey",15108398537,123456,B805KejTP67FW,success
+短信错误,13000001111,123,B805KejTP67FW,手机验证码错误！
+smsKey错误,13000001111,123456,B805KejTP67FW,手机验证码错误！
+smsCode空,13000001111,,B805KejTP67FW,手机验证码错误！
+phone空,,123456,B805KejTP67FW,无效的手机号！
+smsKey空,13000001111,123456,,手机验证码错误！
