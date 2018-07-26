@@ -58,7 +58,7 @@ if __name__=="__main__":
     #api_test_data.init_data() #初始化接口测试数据
     # 指定测试用例为当前文件夹下的test_case目录
     test_dir = './api_test_case'
-    discover = unittest.defaultTestLoader.discover(start_dir=test_dir,pattern='*_test.py')
+    discover = unittest.defaultTestLoader.discover(start_dir=test_dir,pattern='ddtDemo.py')
 
     now = time.strftime("%Y%m%d%H%M%S")
     filename = './report/'+now+'_api_test_report.html'

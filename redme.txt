@@ -2,3 +2,4 @@
 pip install PyMySQL
 pip install request
 pip install ddt
+pip install locustio

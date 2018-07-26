@@ -90,7 +90,7 @@ def get_unix_time(dt):
     return s
 
 
-get_data_time(1531909800)
+#get_data_time(1531909800)
 
-
+get_unix_time("2018-07-22 16:30")
 
