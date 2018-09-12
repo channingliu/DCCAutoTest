@@ -1,5 +1,5 @@
 from public import config
-from public import questsMethod,read_excle
+from public import HttpService,read_excle
 import time,datetime,requests
 import os
 from public import read_csv
@@ -11,9 +11,9 @@ def get_apiUrl(aipName):
 
 def get_request_rsp(url,method,**params):
     if method == "get":
-        rsp = questsMethod.MyHttpRequest().get(url, **params)
+        rsp = HttpService.MyHttpRequest().get(url, **params)
     if method == "post":
-        rsp = questsMethod.MyHttpRequest().post(url, **params)
+        rsp = HttpService.MyHttpRequest().post(url, **params)
     return rsp
 
 def get_excle_data(fileName,sheetName):

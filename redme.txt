@@ -5,3 +5,4 @@ pip install ddt
 pip install locustio
 pip install xmlrunner
 pip install  pyyaml
+pip install xlrd #读取excle

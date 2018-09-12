@@ -1,6 +1,9 @@
+#coding:utf-8
 import requests
 import json
 
+
+#封装requests请求
 class MyHttpRequest(object):
     '''
      def __init__(self,url):
